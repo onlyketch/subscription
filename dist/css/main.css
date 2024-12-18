@@ -93,6 +93,13 @@ html,
     padding-bottom: 96px;
   }
 }
+@media (max-width: 1023px) {
+  .wrapper {
+    padding-bottom: 0;
+    background-image: url("../images/cover-mob.jpg");
+    background-position: 70% top;
+  }
+}
 
 body {
   font-family: "Roboto Flex", serif;
@@ -137,6 +144,17 @@ body {
   height: 100%;
   pointer-events: none;
 }
+@media (max-width: 1023px) {
+  .header__logo {
+    width: 177px;
+    height: 35px;
+  }
+}
+@media (max-width: 1023px) {
+  .header {
+    padding: 35px 24px;
+  }
+}
 
 .content-box {
   position: absolute;
@@ -162,6 +180,15 @@ body {
     margin: -16px auto 0 auto;
   }
 }
+@media (max-width: 1023px) {
+  .content-box {
+    width: 100%;
+    border-radius: 32px 32px 0 0;
+    padding: 36px 24px 34px 24px;
+    margin: 0;
+    height: auto;
+  }
+}
 .content-box__settings {
   display: none;
 }
@@ -170,6 +197,11 @@ body {
   line-height: 24px;
   color: #0D1823;
   font-weight: 800;
+}
+@media (max-width: 1023px) {
+  .content-box__title {
+    max-width: 280px;
+  }
 }
 .content-box__subtitle {
   font-size: 14px;
@@ -184,11 +216,30 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+@media (max-width: 1023px) {
+  .content-box__groups {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .content-box__group {
   margin-right: 36px;
 }
 .content-box__group:last-child {
   margin-right: 0;
+}
+@media (max-width: 1023px) {
+  .content-box__group:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 1023px) {
+  .content-box__group {
+    margin-right: 0;
+    margin-bottom: 36px;
+  }
 }
 .content-box__group-name {
   font-size: 12px;
@@ -278,9 +329,33 @@ body {
 .content-box__buttons .btn-leave {
   margin-right: 24px;
 }
+.content-box__buttons .btn-leave:hover {
+  background-color: #AB052E;
+}
+@media (max-width: 1023px) {
+  .content-box__buttons .btn-leave {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
 .content-box__buttons .btn-unsubscribe {
   background-color: #F3F3F3;
   color: #0D1823;
+}
+.content-box__buttons .btn-unsubscribe:hover {
+  background-color: #DDDDDD;
+}
+@media (max-width: 1023px) {
+  .content-box__buttons {
+    margin-top: 64px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 .content-box__choosed {
   display: none;
@@ -289,11 +364,22 @@ body {
   margin-top: 64px;
   text-align: center;
 }
+@media (max-width: 1023px) {
+  .content-box__choosed .content-box__title, .content-box__unsubscribed .content-box__title {
+    margin: 0 auto;
+    max-width: 240px;
+  }
+}
 .content-box__choosed .content-box__subtitle, .content-box__unsubscribed .content-box__subtitle {
   text-align: center;
   max-width: 452px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 1023px) {
+  .content-box__choosed .content-box__subtitle, .content-box__unsubscribed .content-box__subtitle {
+    max-width: 240px;
+  }
 }
 .content-box__error {
   max-width: 300px;
@@ -318,6 +404,12 @@ body {
   line-height: 18px;
   color: #D61336;
   font-weight: 300;
+}
+@media (max-width: 1023px) {
+  .content-box__error {
+    max-width: 160px;
+    margin: 56px auto 0 auto;
+  }
 }
 .content-box__telegram {
   background-color: #EEEEEE;
@@ -349,12 +441,23 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1023px) {
+  .content-box__telegram-right {
+    display: none;
+  }
+}
 .content-box__telegram-title {
   font-size: 24px;
   line-height: 24px;
   color: #0D1823;
   font-weight: 800;
   max-width: 235px;
+}
+@media (max-width: 1023px) {
+  .content-box__telegram-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .content-box__telegram-subtitle {
   font-size: 14px;
@@ -363,9 +466,19 @@ body {
   font-weight: 300;
   margin-top: 7px;
 }
+@media (max-width: 1023px) {
+  .content-box__telegram-subtitle {
+    margin-top: 8px;
+  }
+}
 .content-box__telegram-btn {
   display: inline-block;
   text-decoration: none;
+}
+@media (max-width: 1023px) {
+  .content-box__telegram-btn {
+    margin-top: 40px;
+  }
 }
 .content-box__telegram-qr {
   width: 155px;
@@ -375,11 +488,31 @@ body {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 1023px) {
+  .content-box__telegram {
+    margin: 112px auto 0 auto;
+  }
+}
 .content-box__unsubscribed {
   display: none;
 }
+@media (max-width: 1023px) {
+  .content-box__unsubscribed .content-box__title {
+    max-width: 295px;
+  }
+}
+@media (max-width: 1023px) {
+  .content-box__unsubscribed .content-box__subtitle {
+    max-width: 100%;
+  }
+}
 .content-box__unsubscribed .content-box__telegram {
   margin: 97px auto 0 auto;
+}
+@media (max-width: 1023px) {
+  .content-box__unsubscribed .content-box__telegram {
+    margin: 136px auto 0 auto;
+  }
 }
 
 .show {

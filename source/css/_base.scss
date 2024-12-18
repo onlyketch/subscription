@@ -28,6 +28,12 @@ html,
     height: auto;
     padding-bottom: 96px;
   }
+
+  @media (max-width: 1023px) {
+    padding-bottom: 0;
+    background-image: url('../images/cover-mob.jpg');
+    background-position: 70% top;
+  }
 }
 
 body {
@@ -81,6 +87,15 @@ body {
       height: 100%;
       pointer-events: none;
     }
+
+    @media (max-width: 1023px) {
+      width: 177px;
+      height: 35px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    padding: 35px 24px;
   }
 
 }
@@ -103,6 +118,14 @@ body {
       margin: -16px auto 0 auto;
   }
 
+  @media (max-width: 1023px) {
+    width: 100%;
+    border-radius: 32px 32px 0 0;
+    padding: 36px 24px 34px 24px;
+    margin: 0;
+    height: auto;
+  }
+
   &__settings {
     display: none;
   }
@@ -112,6 +135,10 @@ body {
     line-height: 24px;
     color: $dark;
     font-weight: 800;
+
+    @media (max-width: 1023px) {
+      max-width: 280px;
+    }
   }
 
   &__subtitle {
@@ -125,6 +152,10 @@ body {
   &__groups {
     margin-top: 36px;
     display: flex;
+
+    @media (max-width: 1023px) {
+      flex-direction: column;
+    }
   }
 
   &__group {
@@ -132,6 +163,15 @@ body {
 
     &:last-child {
       margin-right: 0;
+
+      @media (max-width: 1023px) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      margin-right: 0;
+      margin-bottom: 36px;
     }
   }
 
@@ -212,10 +252,29 @@ body {
 
     .btn-leave {
       margin-right: 24px;
+
+      &:hover {
+        background-color: $dark-red;
+      }
+
+      @media (max-width: 1023px) {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
     }
     .btn-unsubscribe {
       background-color: $light-gray;
       color: $dark;
+
+      &:hover {
+        background-color: $dark-gray;
+      }
+    }
+
+    @media (max-width: 1023px) {
+      margin-top: 64px;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
   }
@@ -230,6 +289,11 @@ body {
       .content-box__title {
         margin-top: 64px;
         text-align: center;
+
+        @media (max-width: 1023px) {
+          margin: 0 auto;
+          max-width: 240px;
+        }
       }
 
       .content-box__subtitle {
@@ -237,6 +301,10 @@ body {
         max-width: 452px;
         margin-left: auto;
         margin-right: auto;
+
+        @media (max-width: 1023px) {
+          max-width: 240px;
+        }
       }
   }
 
@@ -264,6 +332,11 @@ body {
         font-weight: 300;
      }
 
+     @media (max-width: 1023px) {
+        max-width: 160px;
+        margin: 56px auto 0 auto;
+     }
+
   }
 
   &__telegram {
@@ -283,7 +356,11 @@ body {
       justify-content: space-between;
      }
 
-     &-right {}
+     &-right {
+      @media (max-width: 1023px) {
+        display: none;
+      }
+     }
 
      &-text {}
 
@@ -293,6 +370,11 @@ body {
       color: $dark;
       font-weight: 800;
       max-width: 235px;
+
+      @media (max-width: 1023px) {
+        font-size: 20px;
+        line-height: 20px;
+      }
      }
 
      &-subtitle {
@@ -301,11 +383,19 @@ body {
       color: $gray;
       font-weight: 300;
       margin-top: 7px;
+
+      @media (max-width: 1023px) {
+        margin-top: 8px;
+      }
      }
 
      &-btn {
         display: inline-block;
         text-decoration: none;
+
+        @media (max-width: 1023px) {
+          margin-top: 40px;
+        }
      }
 
      &-qr {
@@ -317,13 +407,37 @@ body {
         height: 100%;
       }
      }
+
+     @media (max-width: 1023px) {
+        margin: 112px auto 0 auto;
+     }
   }
 
   &__unsubscribed {
     display: none;
 
+    .content-box__title {
+      
+      @media (max-width: 1023px) {
+        max-width: 295px;
+      }
+      
+    }
+
+    .content-box__subtitle {
+
+      @media (max-width: 1023px) {
+        max-width: 100%;
+      }
+      
+    }
+
     .content-box__telegram {
       margin: 97px auto 0 auto;
+
+      @media (max-width: 1023px) {
+        margin: 136px auto 0 auto;
+      }
     }
 
   }
