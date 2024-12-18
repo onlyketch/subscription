@@ -1,0 +1,387 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+Roboto Flex:
+Regular 400
+ExtraBold 800
+ExtraBlack
+Light 300
+Black 900
+Medium 500
+
+Roboto Condensed Black 900
+*/
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Condensed Black";
+  src: local("Roboto Condensed"), url("../fonts/RobotoCondensed-Black.woff2") format("woff2"), url("../fonts/RobotoCondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+html,
+.nps-survey {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #D61336;
+  background-image: url("../images/cover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+@media (max-height: 759px) {
+  .wrapper {
+    height: auto;
+    padding-bottom: 96px;
+  }
+}
+
+body {
+  font-family: "Roboto Flex", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+}
+
+.text-red {
+  color: #D61336;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #D61336;
+  padding: 16px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: "Roboto Flex", serif;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 800;
+  color: white;
+  -webkit-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.header {
+  padding: 32px 42px;
+}
+.header__logo {
+  display: block;
+  width: 232px;
+  height: 46px;
+}
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.content-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  width: 967px;
+  height: 570px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 36px;
+}
+@media (max-height: 759px) {
+  .content-box {
+    position: static;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    margin: -16px auto 0 auto;
+  }
+}
+.content-box__settings {
+  display: none;
+}
+.content-box__title {
+  font-size: 24px;
+  line-height: 24px;
+  color: #0D1823;
+  font-weight: 800;
+}
+.content-box__subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6E747B;
+  font-weight: 300;
+  margin-top: 8px;
+}
+.content-box__groups {
+  margin-top: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.content-box__group {
+  margin-right: 36px;
+}
+.content-box__group:last-child {
+  margin-right: 0;
+}
+.content-box__group-name {
+  font-size: 12px;
+  line-height: 12px;
+  color: #0D1823;
+  font-weight: 900;
+}
+.content-box__group-items {
+  margin-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.content-box__group-item {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #E7E8E9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.content-box__group-item:last-child {
+  margin-bottom: 0;
+}
+.content-box__group-item-checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.content-box__group-item-checkbox span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 14px;
+  line-height: 14px;
+  color: #0D1823;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 12px 8px 8px;
+}
+.content-box__group-item-checkbox span::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 1px solid #E7E8E9;
+  border-radius: 8px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 10px 7px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.content-box__group-item-checkbox > input:checked + span::before {
+  border-color: #D61336;
+  background-color: #D61336;
+  background-image: url("../images/icon-check.svg");
+}
+.content-box__buttons {
+  margin-top: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.content-box__buttons .btn-leave {
+  margin-right: 24px;
+}
+.content-box__buttons .btn-unsubscribe {
+  background-color: #F3F3F3;
+  color: #0D1823;
+}
+.content-box__choosed {
+  display: none;
+}
+.content-box__choosed .content-box__title, .content-box__unsubscribed .content-box__title {
+  margin-top: 64px;
+  text-align: center;
+}
+.content-box__choosed .content-box__subtitle, .content-box__unsubscribed .content-box__subtitle {
+  text-align: center;
+  max-width: 452px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.content-box__error {
+  max-width: 300px;
+  text-align: center;
+  margin: 24px auto 0 auto;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6E747B;
+  font-weight: 300;
+}
+.content-box__error-change, .content-box__error-subscribe {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  padding: 0;
+  background: transparent;
+  font-family: "Roboto Flex", serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #D61336;
+  font-weight: 300;
+}
+.content-box__telegram {
+  background-color: #EEEEEE;
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 550px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 24px;
+  margin: 115px auto 0 auto;
+}
+.content-box__telegram-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.content-box__telegram-title {
+  font-size: 24px;
+  line-height: 24px;
+  color: #0D1823;
+  font-weight: 800;
+  max-width: 235px;
+}
+.content-box__telegram-subtitle {
+  font-size: 14px;
+  line-height: 18px;
+  color: #6E747B;
+  font-weight: 300;
+  margin-top: 7px;
+}
+.content-box__telegram-btn {
+  display: inline-block;
+  text-decoration: none;
+}
+.content-box__telegram-qr {
+  width: 155px;
+  height: 155px;
+}
+.content-box__telegram-qr img {
+  width: 100%;
+  height: 100%;
+}
+.content-box__unsubscribed {
+  display: none;
+}
+.content-box__unsubscribed .content-box__telegram {
+  margin: 97px auto 0 auto;
+}
+
+.show {
+  display: block;
+}
