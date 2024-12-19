@@ -106,6 +106,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "XOPQ" 96, "XTRA" 468, "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 712;
+  overflow-x: hidden;
 }
 
 .text-red {
@@ -177,7 +178,7 @@ body {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
-    margin: -16px auto 0 auto;
+    margin: 0 auto;
   }
 }
 @media (max-width: 1023px) {

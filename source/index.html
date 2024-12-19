@@ -29,7 +29,7 @@
         </header>
 
         <div class="content-box">
-            <div class="content-box__settings">
+            <div class="content-box__settings show">
                 <h1 class="content-box__title">Настройте рассылку под себя</h1>
                 <div class="content-box__subtitle">Если не хотите получать все наши письма, выберите те тематики, которые вам интересны</div>
                 <div class="content-box__groups">
@@ -157,9 +157,9 @@
                     </div>
                 </div>
             </div>
-            <div class="content-box__unsubscribed show">
+            <div class="content-box__unsubscribed">
                 <h1 class="content-box__title">Вы успешно отписались</h1>
-                <div class="content-box__subtitle">Ваш электронный адрес <span class="text-red">dmitry.khrapskiy@cmwp.ru</span> больше не будет получать письма от <span class="text-red">mail@cmwp.ru</span></div>
+                <div class="content-box__subtitle">Ваш электронный адрес <span class="text-red" id="email-receiver">dmitry.khrapskiy@cmwp.ru</span> больше не будет получать письма от <span class="text-red" id="email-sender">mail@cmwp.ru</span></div>
                 <div class="content-box__error">Это была ошибка? <button class="content-box__error-subscribe">Подписаться заново</button></div>
                 <div class="content-box__telegram">
                     <div class="content-box__telegram-left">
@@ -184,6 +184,6 @@
     </div>
     
     
-    
+    <script src="js/main.js"></script>
 </body>
 </html>
