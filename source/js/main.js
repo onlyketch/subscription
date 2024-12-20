@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let buttonLeaveChoosed = document.querySelector('.btn-leave');
     let buttonUnsubscribe = document.querySelector('.btn-unsubscribe');
     let buttonChangeChoosed = document.querySelector('.content-box__error-change');
+    let buttonSubscribeAgain = document.querySelector('.content-box__error-subscribe');
     
     if (screenSettings !== null) {
         
@@ -20,6 +21,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         buttonChangeChoosed.addEventListener('click', function() {
             screenYouChoosed.classList.remove('show');
+            screenSettings.classList.add('show');
+            pageTitle.textContent = 'Настройте рассылку под себя';
+        });
+
+        buttonSubscribeAgain.addEventListener('click', function() {
+            screenYouUnsubscribed.classList.remove('show');
             screenSettings.classList.add('show');
             pageTitle.textContent = 'Настройте рассылку под себя';
         });
